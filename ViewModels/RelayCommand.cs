@@ -11,22 +11,18 @@ public class RelayCommand : ICommand
         _canExecute = canExecute;
     }
 
-    // Реализация события CanExecuteChanged
     public event EventHandler? CanExecuteChanged;
 
-    // Метод для вызова события CanExecuteChanged
     public void RaiseCanExecuteChanged()
     {
         CanExecuteChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    // Проверка, можно ли выполнить команду
     public bool CanExecute(object? parameter)
     {
         return _canExecute == null || _canExecute();
     }
 
-    // Выполнение команды
     public void Execute(object? parameter)
     {
         _execute();

@@ -22,7 +22,6 @@ public partial class MainWindowViewModel : ViewModelBase
                 _inputText = value;
                 OnPropertyChanged(nameof(InputText));
 
-                // Уведомляем команду о необходимости пересчитать CanExecute
                 ((RelayCommand)EnqueueCommand).RaiseCanExecuteChanged();
             }
         }
@@ -48,7 +47,6 @@ public partial class MainWindowViewModel : ViewModelBase
         }
     }
 
-    // Команды
     public ICommand EnqueueCommand { get; }
     public ICommand DequeueCommand { get; }
     public ICommand ClearCommand { get; }
@@ -70,7 +68,6 @@ public partial class MainWindowViewModel : ViewModelBase
             UpdateQueueState();
             InputText = string.Empty;
 
-            // Уведомляем команду о необходимости пересчитать CanExecute
             ((RelayCommand)DequeueCommand).RaiseCanExecuteChanged();
         }
     }
@@ -83,7 +80,6 @@ public partial class MainWindowViewModel : ViewModelBase
             UpdateQueueState();
             QueueState += $"\nИзвлечено: {item}";
 
-            // Уведомляем команду о необходимости пересчитать CanExecute
             ((RelayCommand)DequeueCommand).RaiseCanExecuteChanged();
         }
         else
@@ -98,16 +94,13 @@ public partial class MainWindowViewModel : ViewModelBase
         UpdateQueueState();
         QueueState += "\nОчередь очищена.";
 
-        // Уведомляем команду о необходимости пересчитать CanExecute
         ((RelayCommand)DequeueCommand).RaiseCanExecuteChanged();
     }
 
     private void UpdateQueueState()
     {
-        // Обновляем общее состояние очереди
         QueueState = $"Текущее состояние очереди ({_queue.Count} элементов):";
 
-        // Формируем строку с элементами очереди
         QueueItems = string.Join(", ", _queue.GetElements());
     }
 }

@@ -1480,11 +1480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dmitr\\desktop\\avalonia\\AvaloniaApp\\AvaloniaApp.csproj",
+      "projectUniqueName": "C:\\Users\\dmitr\\Documents\\GitHub\\AvaloniaTask1.2\\AvaloniaApp.csproj",
       "projectName": "AvaloniaApp",
-      "projectPath": "C:\\Users\\dmitr\\desktop\\avalonia\\AvaloniaApp\\AvaloniaApp.csproj",
+      "projectPath": "C:\\Users\\dmitr\\Documents\\GitHub\\AvaloniaTask1.2\\AvaloniaApp.csproj",
       "packagesPath": "C:\\Users\\dmitr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dmitr\\desktop\\avalonia\\AvaloniaApp\\obj\\",
+      "outputPath": "C:\\Users\\dmitr\\Documents\\GitHub\\AvaloniaTask1.2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
